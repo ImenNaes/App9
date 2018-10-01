@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App9.Page1" >
+
+	<MasterDetailPage.Master>
+		<ContentPage Title="title">
+		   <ContentPage.Content>
+
+				<StackLayout Orientation="Vertical" BackgroundColor="#504c50">
+					<StackLayout>
+						<Image Source="logo.png"/>
+					</StackLayout>
+					
+					<StackLayout Orientation="Horizontal">
+						<StackLayout Padding="20,30,20,20">
+							<Image Source="icon_myAccount.png" WidthRequest="30" HeightRequest="30" Margin="0,1,0,10" />
+							<Image Source="icon_shopp.png" WidthRequest="30" HeightRequest="30" Margin="0,1,0,10"/>
+							<Image Source="icon_faqq.png"  WidthRequest="30" HeightRequest="30" Margin="0,1,0,10"/>
+							<Image Source="icon_notificationn.png"  WidthRequest="30" HeightRequest="30" Margin="0,1,0,10"/>
+						</StackLayout>
+
+								<StackLayout Padding="20">
+									<ListView x:Name="ListView1" ItemSelected="ListView1_OnItemSelected"  SeparatorVisibility="Default" SeparatorColor="White">
+										<ListView.ItemTemplate>
+											<DataTemplate>
+												<TextCell Text="{Binding .}" TextColor="White"/>
+											</DataTemplate>
+										</ListView.ItemTemplate>
+									</ListView>
+
+								</StackLayout>		
+					</StackLayout>
+
+					<StackLayout Orientation="Horizontal" Margin="10,50,10,50" Padding="20">
+					    <Image Source="icon_logout.png"/>
+						<Label Text="logout"/>
+					</StackLayout>
+				</StackLayout>
+		   </ContentPage.Content>
+       </ContentPage>
+    </MasterDetailPage.Master>
+	
+	<MasterDetailPage.Detail>
+		
+	</MasterDetailPage.Detail>
+
+</MasterDetailPage>

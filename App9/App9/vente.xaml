@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App9.vente"
+             BackgroundImage="image.jpg">
+    <ContentPage.Content>
+        <StackLayout >
+			<StackLayout Orientation="Horizontal" BackgroundColor="#443e42">
+				<Grid BackgroundColor="#dcb34a" >
+					<Image Source="exit.jpg">
+						<Image.GestureRecognizers>
+							<TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped">
+
+							</TapGestureRecognizer>
+						</Image.GestureRecognizers>
+					</Image>
+					
+				</Grid>
+				<Label Text="Search" TextColor="White"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+            </StackLayout>
+
+			<StackLayout Margin="10" >
+					<StackLayout BackgroundColor="White" Padding="20">
+						<Label Text="Search"/>
+						<SearchBar x:Name="SearchBar"  Margin="0,0,0,0" TextChanged="SearchBar_OnTextChanged"/>
+					</StackLayout>
+
+				<StackLayout BackgroundColor="White" Margin="0,20,0,0">
+					<ListView x:Name="ListViewVente" SeparatorColor="DarkGray" HasUnevenRows="True">
+
+						<ListView.ItemTemplate>
+							<DataTemplate>
+								<ViewCell Height="100">
+									<ViewCell.View>
+										<StackLayout Orientation="Horizontal" Padding="20,10,0,0">
+											<Image Source="{Binding Image}"/>
+											<StackLayout>
+			
+													<Label Text="{Binding Name}"/> 
+													<Label Text="{Binding Status}"/> 
+													<Label Text="{Binding Price}"/>
+
+											</StackLayout>
+											
+										</StackLayout>
+									</ViewCell.View>
+								</ViewCell>
+								<!--<ImageCell Text="{Binding Name}" Detail="{Binding Status}" ImageSource="{Binding Image}" TextColor="Black"/>-->
+									
+							</DataTemplate>
+						</ListView.ItemTemplate>
+
+					</ListView>
+				</StackLayout>
+
+			</StackLayout>
+
+
+		</StackLayout>
+    </ContentPage.Content>
+</ContentPage>
