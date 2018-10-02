@@ -9,9 +9,9 @@
 				<Grid BackgroundColor="#dcb34a" >
 					<Image Source="exit.jpg">
 						<Image.GestureRecognizers>
-							<TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped">
-
-							</TapGestureRecognizer>
+							<TapGestureRecognizer>
+                                <!--Tapped="TapGestureRecognizer_OnTapped"-->
+                            </TapGestureRecognizer>
 						</Image.GestureRecognizers>
 					</Image>
 					
